@@ -15,6 +15,7 @@ void selectionSort(vector<int> &arr)
                 min_idx = j;
             }
         }
+        // Lakukan pertukaran hanya jika min_idx berbeda dengan i
         if (min_idx != i)
         {
             swap(arr[i], arr[min_idx]);
