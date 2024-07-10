@@ -15,7 +15,6 @@ void selectionSort(vector<int> &arr)
                 min_idx = j;
             }
         }
-        // Lakukan pertukaran hanya jika min_idx berbeda dengan i
         if (min_idx != i)
         {
             swap(arr[i], arr[min_idx]);
@@ -23,9 +22,19 @@ void selectionSort(vector<int> &arr)
     }
 }
 
+void printArray(const vector<int> &arr)
+{
+    cout << "Array setelah diurutkan: ";
+    for (int num : arr)
+    {
+        cout << num << " ";
+    }
+    cout << "\n";
+}
+
 int main()
 {
-    vector<int> arr = {63, 10, 41, 0, 74, 32}; // Mengubah angka 00 menjadi 0 untuk kejelasan
+    vector<int> arr = {63, 10, 41, 0, 74, 32};
 
     cout << "Array sebelum diurutkan:\n";
     for (int num : arr)
@@ -36,12 +45,7 @@ int main()
 
     selectionSort(arr);
 
-    cout << "Array setelah diurutkan menggunakan Selection Sort:\n";
-    for (int num : arr)
-    {
-        cout << num << " ";
-    }
-    cout << "\n";
+    printArray(arr); // Memanggil fungsi printArray untuk mencetak array setelah diurutkan
 
     return 0;
 }
