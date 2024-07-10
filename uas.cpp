@@ -22,16 +22,6 @@ void selectionSort(vector<int> &arr)
     }
 }
 
-void printArray(const vector<int> &arr)
-{
-    cout << "Array setelah diurutkan: ";
-    for (int num : arr)
-    {
-        cout << num << " ";
-    }
-    cout << "\n";
-}
-
 int main()
 {
     vector<int> arr = {63, 10, 41, 0, 74, 32};
@@ -45,7 +35,12 @@ int main()
 
     selectionSort(arr);
 
-    printArray(arr); // Memanggil fungsi printArray untuk mencetak array setelah diurutkan
+    cout << "Array setelah diurutkan:\n";
+    for (int num : arr)
+    {
+        cout << num << " ";
+    }
+    cout << "\n";
 
     return 0;
 }
