@@ -1,4 +1,3 @@
-// selection_sort.cpp
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -16,13 +15,16 @@ void selectionSort(vector<int> &arr)
                 min_idx = j;
             }
         }
-        swap(arr[i], arr[min_idx]);
+        if (min_idx != i)
+        {
+            swap(arr[i], arr[min_idx]);
+        }
     }
 }
 
 int main()
 {
-    vector<int> arr = {63, 10, 41, 00, 74, 32};
+    vector<int> arr = {63, 10, 41, 0, 74, 32}; // Mengubah angka 00 menjadi 0 untuk kejelasan
 
     cout << "Array sebelum diurutkan:\n";
     for (int num : arr)
